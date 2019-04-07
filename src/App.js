@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import { StilrenProvider } from 'stilren/dist/react';
+import { Client } from 'styletron-engine-atomic';
+import Header from './sections/Header';
+
+const styletron = new Client();
+
+const pseudos = ['hover', 'focus'];
+const breakpoints = {
+  mobile: '(min-width: 768px)',
+  desktop: '(max-width: 769px)',
+};
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <ParallaxProvider>
+        <StilrenProvider
+          styletron={styletron}
+          breakpoints={breakpoints}
+          pseudos={pseudos}
+        >
+          <Header />
+          <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
+            <img src="/img1.jpg" alt="Elfving hård" />
+          </Parallax>
+        </StilrenProvider>
+      </ParallaxProvider>
     );
   }
 }

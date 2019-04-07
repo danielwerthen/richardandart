@@ -4,10 +4,13 @@
   "private": true,
   "homepage": "https://danielwerthen.github.io/richardandart/",
   "dependencies": {
+    "create-react-context": "^0.2.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8",
-    "react-scroll-parallax": "^2.1.0"
+    "react-scroll-parallax": "^2.1.0",
+    "stilren": "^0.0.4",
+    "styletron-engine-atomic": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
