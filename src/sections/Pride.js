@@ -1,20 +1,7 @@
 import React from 'stilren/react';
-import { Parallax } from 'react-scroll-parallax';
 
-function Ribbon({ color, idx }) {
-  let p = (6 - idx + 1) * 25;
-  console.log(p);
-  return (
-    <div $position="absolute" $top={`${idx * 16.66}vh`}>
-      <Parallax y={[-10 * idx, 10 * idx]}>
-        <div
-          $background={color}
-          $width="300vw"
-          $height={`${100 - idx * 16.66}vh`}
-        />
-      </Parallax>
-    </div>
-  );
+function Ribbon({ color, idx, ...props }) {
+  return <div $background={color} $height="10px" {...props} />;
 }
 
 const colors = [
@@ -26,17 +13,14 @@ const colors = [
   '#760089',
 ];
 
-export default function Pride() {
+export default function Pride(props) {
   return (
-    <div
-      $height="100vh"
-      $position="relative"
-      $overflow="hidden"
-      $background={'white' || colors[0]}
-    >
+    <>
+      <div $height="35vh" />
       {colors.map((color, idx) => (
-        <Ribbon key={color} color={color} idx={idx} />
+        <Ribbon key={color} color={color} idx={idx} {...props} />
       ))}
-    </div>
+      <div $height="35vh" />
+    </>
   );
 }

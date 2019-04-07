@@ -4,10 +4,13 @@ import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import { StilrenProvider } from 'stilren/dist/react';
 import { Client } from 'styletron-engine-atomic';
 import Header from './sections/Header';
+import Pride from './sections/Pride';
+import Details from './sections/Details';
+import RSVP from './sections/RSVP';
 
 const styletron = new Client();
 
-const pseudos = ['hover', 'focus'];
+const pseudos = ['hover', 'focus', 'active'];
 const breakpoints = {
   mobile: '(max-width: 768px)',
   desktop: '(min-width: 769px)',
@@ -23,7 +26,10 @@ class App extends Component {
           pseudos={pseudos}
         >
           <Header />
-          <div style={{ height: '100vh' }} />
+          <Pride />
+          <Details />
+          <Pride />
+          <RSVP />
         </StilrenProvider>
       </ParallaxProvider>
     );
