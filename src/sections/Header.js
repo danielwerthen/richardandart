@@ -1,5 +1,6 @@
 import React from 'stilren/react';
 import Ticket from './Ticket';
+import hand from './hand.png';
 import { Parallax } from 'react-scroll-parallax';
 
 export default function Header() {
@@ -24,7 +25,7 @@ export default function Header() {
         <div $position="absolute" $bottom="calc(10vh + 5em)" $right="2em">
           <img
             $height="32px"
-            src="/hand.png"
+            src={hand}
             alt="Hand pointing towards wedding"
             $objectFit="contain"
             $transform="rotateZ(90deg)"

@@ -1,4 +1,5 @@
 import React from 'stilren/react';
+import hand from './hand.png';
 
 export default function RSVP() {
   return (
@@ -42,7 +43,7 @@ export default function RSVP() {
         >
           <img
             $height="32px"
-            src="/hand.png"
+            src={hand}
             alt="Hand pointing towards wedding"
             $objectFit="contain"
             $transform="rotateZ(90deg)"

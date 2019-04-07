@@ -1,4 +1,6 @@
 import React from 'stilren/react';
+import map from './map.png';
+import img1 from './img1.jpg';
 
 export default function Details() {
   return (
@@ -26,14 +28,14 @@ export default function Details() {
       <a href="https://goo.gl/maps/mSZBEQzvhrm">
         <div $display="flex" $margin="2em 0">
           <img
-            src="/map.png"
+            src={map}
             alt="Map to Elfviks Herrgård"
             $width="40vw"
             $height="30vw"
             $objectFit="cover"
           />
           <img
-            src="/img1.jpg"
+            src={img1}
             alt="Elfviks Herrgård"
             $width="40vw"
             $height="30vw"
