@@ -9,8 +9,8 @@ const styletron = new Client();
 
 const pseudos = ['hover', 'focus'];
 const breakpoints = {
-  mobile: '(min-width: 768px)',
-  desktop: '(max-width: 769px)',
+  mobile: '(max-width: 768px)',
+  desktop: '(min-width: 769px)',
 };
 
 class App extends Component {
@@ -23,9 +23,7 @@ class App extends Component {
           pseudos={pseudos}
         >
           <Header />
-          <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
-            <img src="/img1.jpg" alt="Elfving hård" />
-          </Parallax>
+          <div style={{ height: '100vh' }} />
         </StilrenProvider>
       </ParallaxProvider>
     );

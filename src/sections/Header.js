@@ -1,216 +1,80 @@
 import React from 'stilren/react';
+import Ticket from './Ticket';
 import { Parallax } from 'react-scroll-parallax';
-
-function Blocker({ size, border, color, offset = 0, ...props }) {
-  return (
-    <>
-      <div
-        $position="absolute"
-        $top={`${-size / 2 - offset}px`}
-        $left={`${-size / 2 - offset}px`}
-        $borderRadius="100%"
-        $height={`${size}px`}
-        $width={`${size}px`}
-        $border={`${border} solid ${color}`}
-        {...props}
-      />
-      <div
-        $position="absolute"
-        $top={`${-size / 2 - offset}px`}
-        $right={`${-size / 2 - offset}px`}
-        $borderRadius="100%"
-        $height={`${size}px`}
-        $width={`${size}px`}
-        $border={`${border} solid ${color}`}
-        {...props}
-      />
-      <div
-        $position="absolute"
-        $bottom={`${-size / 2 - offset}px`}
-        $right={`${-size / 2 - offset}px`}
-        $borderRadius="100%"
-        $height={`${size}px`}
-        $width={`${size}px`}
-        $border={`${border} solid ${color}`}
-        {...props}
-      />
-      <div
-        $position="absolute"
-        $bottom={`${-size / 2 - offset}px`}
-        $left={`${-size / 2 - offset}px`}
-        $borderRadius="100%"
-        $height={`${size}px`}
-        $width={`${size}px`}
-        $border={`${border} solid ${color}`}
-        {...props}
-      />
-    </>
-  );
-}
-
-function Ticket({
-  blockSize = 70,
-  color1 = 'red',
-  color2 = 'yellow',
-  background = 'white',
-  borders,
-  children,
-  ...props
-}) {
-  const reverse = borders;
-  return (
-    <div {...props} $position="relative" $overflow="hidden">
-      {reverse.reduce(
-        (body, bsize, idx, arr) => (
-          <React.Fragment>
-            <div
-              $border={`${bsize}px solid ${idx % 2 === 0 ? color1 : color2}`}
-              $overflow="hidden"
-              $position="relative"
-            >
-              {body}
-            </div>
-            <Blocker
-              size={
-                blockSize + arr.slice(0, idx).reduce((sum, i) => sum + i, 0)
-              }
-              border={`${bsize}px`}
-              offset={bsize}
-              color={idx % 2 === 0 ? color1 : color2}
-              $background={
-                idx === arr.length - 1
-                  ? background
-                  : idx % 2 !== 0
-                  ? color1
-                  : color2
-              }
-            />
-          </React.Fragment>
-        ),
-        children
-      )}
-    </div>
-  );
-}
 
 export default function Header() {
   return (
     <>
-      <div $height="200vh">
-        <div $height="100vh" />
-        <Ticket
-          $display="inline-block"
-          borders={[1, 2, 2, 13]}
-          color1="#AA2C21"
-          color2="#ECB61D"
+      <div $height="110vh" $position="relative">
+        <div
+          $height="100vh"
+          $display="flex"
+          $justifyContent="center"
+          $alignItems="center"
+          $flexDirection="column"
         >
-          <div
-            $height="225px"
-            $width="450px"
-            $display="flex"
-            $justifyContent="center"
-            $alignItems="center"
-            $background="#ECB61D"
-            $position="relative"
+          <h1
+            $fontSize="82px"
+            $fontFamily="'Limelight', cursive"
+            $textTransform="uppercase"
           >
-            <div
-              $marginTop="-40px"
-              $fontFamily="'Limelight', cursive"
-              $fontSize="80px"
-              $textTransform="uppercase"
-              $color="#131313"
-              $lineHeight="0.8em"
-            >
-              <div $textAlign="center">Admit</div>
-              <div $textAlign="center">one</div>
-            </div>
-            <div
-              $position="absolute"
-              $transform=""
-              $bottom="3%"
-              $fontSize="18px"
-              $color="#AA2C21"
-              $right="45px"
-              $fontFamily="'Barlow Semi Condensed', sans-serif"
-              $fontWeight="bold"
-            >
-              <div>5pm-</div>
-              <div>2am</div>
-            </div>
-            <div $position="absolute" $bottom="5%" $left="72px">
-              <Parallax x={[-20, 20]}>
-                <img
-                  $height="32px"
-                  src="/hand.png"
-                  alt="Hand pointing towards wedding"
-                  $objectFit="contain"
-                />
-              </Parallax>
-            </div>
-            <div
-              $position="absolute"
-              $bottom="10%"
-              $fontSize="28px"
-              $fontFamily="'Barlow Semi Condensed', sans-serif"
-              $fontWeight="bold"
-            >
-              Wedding!
-            </div>
-            <div
-              $position="absolute"
-              $bottom="3%"
-              $fontSize="14px"
-              $fontFamily="'Barlow Semi Condensed', sans-serif"
-              $fontWeight="bold"
-              $color="#AA2C21"
-            >
-              Elfviks Herrgård
-            </div>
-            <div
-              $position="absolute"
-              $transform="translateX(-37%) rotateZ(90deg)"
-              $top="47%"
-              $fontSize="10px"
-              $left="0"
-              $fontFamily="'Rye', cursive"
-            >
-              www.richardandart.com
-            </div>
-            <div
-              $position="absolute"
-              $transform="translateX(37%) rotateZ(-90deg)"
-              $top="47%"
-              $fontSize="10px"
-              $right="0"
-              $fontFamily="'Rye', cursive"
-            >
-              www.richardandart.com
-            </div>
-            <div
-              $position="absolute"
-              $bottom="60px"
-              $left="45px"
-              $right="45px"
-              $borderTop="2px solid rgba(0,0,0,0.4)"
-            />
-            <div
-              $position="absolute"
-              $bottom="10px"
-              $right="96px"
-              $borderRight="2px solid rgba(0,0,0,0.4)"
-              $height="50px"
-            />
-            <div
-              $position="absolute"
-              $top="30px"
-              $bottom="30px"
-              $left="35px"
-              $right="35px"
-              $borderRight="2px solid rgba(0,0,0,0.4)"
-              $borderLeft="2px solid rgba(0,0,0,0.4)"
-            />
-          </div>
-        </Ticket>
+            Your invited!
+          </h1>
+        </div>
+        <div $position="absolute" $bottom="calc(10vh + 5em)" $right="2em">
+          <img
+            $height="32px"
+            src="/hand.png"
+            alt="Hand pointing towards wedding"
+            $objectFit="contain"
+            $transform="rotateZ(90deg)"
+            $position="relative"
+            $animation="movedown 2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite"
+          />
+        </div>
+        <div
+          $position="absolute"
+          $top="90%"
+          $right="-120px"
+          $desktopRight="-2%"
+          $transform="translateY(-50%) scale(0.4)"
+        >
+          <Parallax y={[100, -110]}>
+            <Ticket />
+          </Parallax>
+        </div>
+        <div
+          $position="absolute"
+          $top="75%"
+          $left="-120px"
+          $desktopLeft="10%"
+          $transform="translateY(-50%) scale(0.6)"
+        >
+          <Parallax y={[200, -200]}>
+            <Ticket />
+          </Parallax>
+        </div>
+        <div
+          $position="absolute"
+          $top="110%"
+          $left="-20px"
+          $transform="translateY(-50%) scale(0.7)"
+        >
+          <Parallax y={[250, -250]}>
+            <Ticket />
+          </Parallax>
+        </div>
+        <div
+          $display="none"
+          $desktopDisplay="block"
+          $position="absolute"
+          $top="80%"
+          $left="45%"
+        >
+          <Parallax y={[250, -250]}>
+            <Ticket />
+          </Parallax>
+        </div>
       </div>
     </>
   );
