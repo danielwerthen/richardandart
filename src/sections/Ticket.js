@@ -1,5 +1,6 @@
 import React from 'stilren/react';
 import { Parallax } from 'react-scroll-parallax';
+import hand from './hand.png';
 
 function Blocker({ size, border, color, offset = 0, ...props }) {
   return (
@@ -139,7 +140,7 @@ export default function Ticket(props) {
           <Parallax x={[-20, 20]}>
             <img
               $height="32px"
-              src="/hand.png"
+              src={hand}
               alt="Hand pointing towards wedding"
               $objectFit="contain"
             />
