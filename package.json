@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://danielwerthen.github.io/richardandart/",
   "dependencies": {
+    "@typeform/embed": "^0.7.0",
     "create-react-context": "^0.2.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

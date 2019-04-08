@@ -43,7 +43,7 @@ export default function Details() {
           />
         </div>
       </a>
-      <div $maxWidth="500px">
+      <div $maxWidth="500px" $margin="0 2em">
         <h3>Transportation</h3>
         <p>
           The easiest way to get to Elfviks Herrgård is via public
