@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/richardandart/static/js/runtime~main.2fda839a.js"
   },
   {
-    "revision": "fabf4870ee6c100b2752",
-    "url": "/richardandart/static/js/main.635d4068.chunk.js"
+    "revision": "6548b3cff19167a1c041",
+    "url": "/richardandart/static/js/main.16f57f83.chunk.js"
   },
   {
-    "revision": "29715c8e093a5ee33972",
-    "url": "/richardandart/static/js/2.21fa453b.chunk.js"
+    "revision": "bdc63260810cdd4ee261",
+    "url": "/richardandart/static/js/2.425b9a6d.chunk.js"
   },
   {
-    "revision": "fabf4870ee6c100b2752",
+    "revision": "6548b3cff19167a1c041",
     "url": "/richardandart/static/css/main.0eea29bd.chunk.css"
   },
   {
-    "revision": "f003ee4ca6b6ac9aea95ed61995ba476",
+    "revision": "9e23740d2d5c04343ffe6676107c09c8",
     "url": "/richardandart/index.html"
   }
 ];
