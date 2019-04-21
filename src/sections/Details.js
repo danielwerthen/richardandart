@@ -1,6 +1,8 @@
 import React from 'stilren/react';
 import map from './map.png';
 import img1 from './img1.jpg';
+import joel from './joel.jpg';
+import lolita from './lolita.jpg';
 
 export default function Details() {
   return (
@@ -20,6 +22,7 @@ export default function Details() {
         Details
       </h2>
       <p>24 August 2019, kl 17:00 (5.00 pm)</p>
+      <p>Cermonin startar kl 17:45 (5.45 pm)</p>
       <ul $listStyle="none" $paddingLeft="0">
         <li>Elfviks Herrgård</li>
         <li>Elfviksvägen 152 </li>
@@ -87,9 +90,28 @@ export default function Details() {
           we have mood managers instead! So if you want to say a few words
           during the dinner, contact them on XXXX
         </p>
-        <p>Lolita Opwapo</p>
-        <p>Joel Axelsson</p>
-        (BILDER PÅ DEM)
+        <div $display="flex" $textAlign="center">
+          <div $flex="1">
+            <img
+              src={joel}
+              alt="Joel, mood manager"
+              $maxWidth="100%"
+              $borderRadius="100%"
+              $objectFit="cover"
+            />
+            <p>Joel Axelsson</p>
+          </div>
+          <div $flex="1" $textAlign="center">
+            <img
+              src={lolita}
+              alt="Lolita, mood manager"
+              $maxWidth="100%"
+              $borderRadius="100%"
+              $objectFit="cover"
+            />
+            <p>Lolita Opwapo</p>
+          </div>
+        </div>
         <h3>About the party</h3>
         <p>
           We want you with us on this day, because you are special to us. Come

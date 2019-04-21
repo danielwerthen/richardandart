@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import { StilrenProvider } from 'stilren/dist/react';
 import { Client } from 'styletron-engine-atomic';
 import Header from './sections/Header';
