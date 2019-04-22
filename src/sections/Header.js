@@ -32,6 +32,7 @@ export default function Header() {
               $textTransform="uppercase"
               $color="white"
               $textShadow="0 0 10px black"
+              $textAlign="center"
             >
               You're invited!
             </h1>
