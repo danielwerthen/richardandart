@@ -20,7 +20,7 @@ var settings = {
   speed: 500,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 8000,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
