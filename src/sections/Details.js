@@ -22,7 +22,7 @@ export default function Details() {
         Details
       </h2>
       <p>24 August 2019, 17:00 (5.00 pm)</p>
-      <p>The cermony starts at 17:45 (5.45 pm)</p>
+      <p>The ceremony starts at 17:45 (5.45 pm)</p>
       <ul $listStyle="none" $paddingLeft="0">
         <li>Elfviks Herrgård</li>
         <li>Elfviksvägen 152 </li>

@@ -10,6 +10,8 @@
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8",
     "react-scroll-parallax": "^2.1.0",
+    "react-slick": "^0.24.0",
+    "slick-carousel": "^1.8.1",
     "stilren": "^0.0.4",
     "styletron-engine-atomic": "^1.1.0"
   },

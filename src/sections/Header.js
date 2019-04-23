@@ -71,7 +71,11 @@ export default function Header() {
         </div>
         <div $position="absolute" $top="110%" $left="20%">
           <Parallax y={[120, -120]}>
-            <Ticket $width="500px" $filter="drop-shadow(0 0 60px black)" />
+            <Ticket
+              $width="500px"
+              $maxWidth="90vw"
+              $filter="drop-shadow(0 0 60px black)"
+            />
           </Parallax>
         </div>
       </div>

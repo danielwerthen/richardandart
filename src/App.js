@@ -7,6 +7,7 @@ import Header from './sections/Header';
 import Pride from './sections/Pride';
 import Details from './sections/Details';
 import RSVP from './sections/RSVP';
+import Carousel from './sections/Carousel';
 
 const styletron = new Client();
 
@@ -28,6 +29,8 @@ class App extends Component {
           <Header />
           <Pride />
           <Details />
+          <Pride />
+          <Carousel />
           <Pride />
           <RSVP />
         </StilrenProvider>
