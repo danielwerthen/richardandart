@@ -33,6 +33,7 @@ export default function Header() {
               $color="white"
               $textShadow="0 0 10px black"
               $textAlign="center"
+              $mobileFontSize="60px"
             >
               You're invited!
             </h1>
@@ -49,7 +50,7 @@ export default function Header() {
             $animation="movedown 2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite"
           />
         </div>
-        <div $position="absolute" $top="90%" $left="10%">
+        <div $position="absolute" $top="90%" $left="10%" $mobileDisplay="none">
           <Parallax y={[100, -110]}>
             <Ticket $width="350px" $filter="drop-shadow(0 0 50px black)" />
           </Parallax>
@@ -59,7 +60,7 @@ export default function Header() {
             <Ticket $width="300px" $filter="drop-shadow(0 0 20px black)" />
           </Parallax>
         </div>
-        <div $position="absolute" $top="130%" $left="8%">
+        <div $position="absolute" $top="130%" $left="8%" $mobileDisplay="none">
           <Parallax y={[60, -60]}>
             <Ticket $width="250px" $filter="drop-shadow(0 0 20px black)" />
           </Parallax>
@@ -69,7 +70,7 @@ export default function Header() {
             <Ticket $width="320px" $filter="drop-shadow(0 0 20px black)" />
           </Parallax>
         </div>
-        <div $position="absolute" $top="110%" $left="20%">
+        <div $position="absolute" $top="110%" $left="20%" $mobileDisplay="none">
           <Parallax y={[120, -120]}>
             <Ticket
               $width="500px"
