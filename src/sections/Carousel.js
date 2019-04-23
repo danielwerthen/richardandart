@@ -17,11 +17,7 @@ import img13 from './img13.jpg';
 import img14 from './img14.jpg';
 
 var settings = {
-  dots: true,
-  infinite: true,
   speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
   responsive: [
     {
       breakpoint: 1024,
