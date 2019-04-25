@@ -22,8 +22,13 @@ export default function RSVP() {
   const openPopup = useCallback(() => {
     popup.open();
   }, []);
+  const submitAgain = useCallback(() => {
+    popup.open();
+    onSubmit(false);
+  }, []);
   return (
     <div
+      id="rsvp"
       $height="80vh"
       $position="relative"
       $display="flex"
@@ -37,7 +42,7 @@ export default function RSVP() {
         $textTransform="uppercase"
         $textAlign="center"
       >
-        Get your ticket!
+        Confirm your ticket!
       </h2>
       <div $position="relative">
         <button
@@ -100,17 +105,39 @@ export default function RSVP() {
           <h2 $margin="0 2em" $textAlign="center">
             Don’t forget to bring your ticket!
           </h2>
+          <div $marginTop="4em">
+            <button
+              $padding="0.5em"
+              $border="1px solid white"
+              $borderRadius="6px"
+              $boxShadow="2px 4px 10px 0px black"
+              $fontFamily="'Limelight', cursive"
+              $background="black"
+              $color="white"
+              $fontSize="32px"
+              $activeTransform="translate(1px, 2px)"
+              $activeBoxShadow="1px 2px 10px 0 black"
+              $cursor="pointer"
+              $outline="none"
+              onClick={submitAgain}
+            >
+              RSVP for your +1
+            </button>
+          </div>
           <div
             $position="absolute"
             $top="75%"
             $left="50%"
             $transform="translate(-50%, -50%) scale(0.4)"
           >
-            <Ticket />
+            <div $mobileTransform="scale(2)">
+              <Ticket />
+            </div>
             <div
               $position="absolute"
               $transform="matrix(-1, 0, 0, 1, 0, 0) rotateZ(-90deg)"
               $right="-70%"
+              $mobileRight="-200%"
               $top="40%"
             >
               <img
