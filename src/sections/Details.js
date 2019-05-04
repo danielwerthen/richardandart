@@ -88,7 +88,10 @@ export default function Details() {
         <p>
           Yeah, that’s right, we are so casual we don’t even have toastmasters,
           we have mood managers instead! So if you want to say a few words
-          during the dinner, contact them on XXXX
+          during the dinner, contact them on{' '}
+          <a href="mailto:moodmanagers@richardandart.com">
+            moodmanagers@richardandart.com
+          </a>
         </p>
         <div $display="flex" $textAlign="center">
           <div $flex="1">
@@ -100,6 +103,7 @@ export default function Details() {
               $objectFit="cover"
             />
             <p>Joel Axelsson</p>
+            <a href="tel:+46 73-693 50 76">+46 73-693 50 76</a>
           </div>
           <div $flex="1" $textAlign="center">
             <img
@@ -110,6 +114,7 @@ export default function Details() {
               $objectFit="cover"
             />
             <p>Lolita Opwapo</p>
+            <a href="tel:+46 73-720 43 39">+46 73-720 43 39</a>
           </div>
         </div>
         <h3>About the party</h3>
