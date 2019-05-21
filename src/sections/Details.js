@@ -116,7 +116,7 @@ export default function Details() {
         <p>
           We want you with us on this day, because you are special to us. Come
           as you are and celebrate our love with us. If you know either of us at
-          all by know, you know this: it will be a party to be remembered!
+          all by now, you know this: it will be a party to be remembered!
         </p>
         <p>All aboard? Let’s go!</p>
       </div>
